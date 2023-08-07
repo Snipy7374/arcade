@@ -5,7 +5,7 @@ derive from.
 import logging
 import os
 import time
-from typing import Tuple, Optional
+from typing import List, Tuple, Optional
 
 import pyglet
 
