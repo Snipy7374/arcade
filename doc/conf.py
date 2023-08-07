@@ -169,6 +169,13 @@ suppress_warnings = [
     "ref.python",
 ]
 
+def strip_init_return_typehint(app, what, name, obj, options, signature, return_annotation):
+    # Prevent a the `-> None` annotation from appearing after classes.
+    # This annotation comes from the `__init__`, but it renders on the class,
+    # e.g. `Foo() -> None`
+    # From the user's perspective, this is wrong: `Foo() -> Foo` not `None`
+    if what == "class" and return_annotation is None:
+        return (signature, None)
 
 def warn_undocumented_members(_app, what, name, _obj, _options, lines):
     if len(lines) == 0:
@@ -255,3 +262,4 @@ def setup(app):
     app.connect('source-read', source_read)
     app.connect('build-finished', post_process)
     app.connect("autodoc-process-docstring", warn_undocumented_members)
+    app.connect('autodoc-process-signature', strip_init_return_typehint, -1000)
