@@ -15,7 +15,7 @@ class SimpleHitBoxAlgorithm(HitBoxAlgorithm):
         Given an RGBA image, this returns points that make up a hit box around it. Attempts
         to trim out transparent pixels.
 
-        :param Image image:
+        :param image:
 
         :Returns: List of points
         """

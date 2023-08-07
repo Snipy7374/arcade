@@ -25,8 +25,8 @@ def quad_2d(size: Tuple[float, float] = (1.0, 1.0), pos: Tuple[float, float] = (
     """
     Creates 2D quad Geometry using 2 triangle strip with texture coordinates.
 
-    :param tuple size: width and height
-    :param float pos: Center position x and y
+    :param size: width and height
+    :param pos: Center position x and y
     :rtype: A :py:class:`~arcade.gl.geometry.Geometry` instance.
     """
     ctx = _get_active_context()
@@ -51,10 +51,10 @@ def screen_rectangle(bottom_left_x: float, bottom_left_y: float, width: float, h
     """
     Creates screen rectangle using 2 triangle strip with texture coordinates.
 
-    :param float bottom_left_x: Bottom left x position
-    :param float bottom_left_y: Bottom left y position
-    :param float width: Width of the rectangle
-    :param float height: Height of the rectangle
+    :param bottom_left_x: Bottom left x position
+    :param bottom_left_y: Bottom left y position
+    :param width: Width of the rectangle
+    :param height: Height of the rectangle
     """
     ctx = _get_active_context()
     data = array('f', [
@@ -76,8 +76,8 @@ def cube(
 ) -> Geometry:
     """Creates a cube with normals and texture coordinates.
 
-    :param tuple size: size of the cube as a 3-component tuple
-    :param tuple center: center of the cube as a 3-component tuple
+    :param size: size of the cube as a 3-component tuple
+    :param center: center of the cube as a 3-component tuple
     :rtype: arcade.gl.Geometry
     :returns: A cube
     """
@@ -219,11 +219,11 @@ def sphere(
     """
     Creates a 3D sphere.
 
-    :param float radius: Radius or the sphere
-    :param int rings: number or horizontal rings
-    :param int sectors: number of vertical segments
-    :param bool normals: Include normals in the VAO
-    :param bool uvs: Include texture coordinates in the VAO
+    :param radius: Radius or the sphere
+    :param rings: number or horizontal rings
+    :param sectors: number of vertical segments
+    :param normals: Include normals in the VAO
+    :param uvs: Include texture coordinates in the VAO
     :return: A geometry object
     """
     ctx = _get_active_context()
