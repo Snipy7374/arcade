@@ -127,7 +127,6 @@ class Sound:
 
         :param player: Player returned from :func:`play_sound`.
         :returns: A boolean, ``True`` if the sound is playing.
-        :rtype: bool
 
         """
         return player.playing
@@ -138,7 +137,6 @@ class Sound:
 
         :param player: Player returned from :func:`play_sound`.
         :returns: A float, 0 for volume off, 1 for full volume.
-        :rtype: float
         """
         return player.volume # type: ignore  # pending https://github.com/pyglet/pyglet/issues/847
 
@@ -171,7 +169,6 @@ def load_sound(path: Union[str, Path], streaming: bool = False) -> Optional[Soun
                            or load it all into memory. Set to ``True`` for long sounds to save
                            memory, ``False`` for short sounds to speed playback.
     :returns: Sound object which can be used by the  :func:`play_sound` function.
-    :rtype: Sound
     """
     # Initialize the audio driver if it hasn't been already.
     # This call is to avoid audio driver initialization

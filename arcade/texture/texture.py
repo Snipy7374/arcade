@@ -349,7 +349,6 @@ class Texture:
         if the texture has been transformed or the
         size have been set manually.
 
-        :rtype: int
         """
         return self._size[0]
 
@@ -366,7 +365,6 @@ class Texture:
         if the texture has been transformed or the
         size have been set manually.
 
-        :rtype: int
         """
         return self._size[1]
 
@@ -383,7 +381,6 @@ class Texture:
         if the texture has been transformed or the
         size have been set manually.
 
-        :rtype: Tuple[int, int]
         """
         return self._size
 

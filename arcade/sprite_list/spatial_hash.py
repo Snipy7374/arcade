@@ -99,7 +99,6 @@ class SpatialHash(Generic[SpriteType]):
 
         :param sprite: The sprite to check
         :return: A set of close-by sprites
-        :rtype: Set
         """
         min_point = trunc(sprite.left), trunc(sprite.bottom)
         max_point = trunc(sprite.right), trunc(sprite.top)
@@ -123,7 +122,6 @@ class SpatialHash(Generic[SpriteType]):
         :param point: The point to check
 
         :return: A set of close-by sprites
-        :rtype: Set
         """
         hash_point = self.hash((trunc(point[0]), trunc(point[1])))
         # Return a copy of the set.
@@ -135,7 +133,6 @@ class SpatialHash(Generic[SpriteType]):
 
         :param rect: The rectangle to check (left, right, bottom, top)
         :return: A set of sprites in the rectangle
-        :rtype: Set
         """
         left, right, bottom, top = rect
         min_point = trunc(left), trunc(bottom)

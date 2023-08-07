@@ -286,7 +286,6 @@ class SpriteList(Generic[SpriteType]):
         Get or set the visible flag for this spritelist.
         If visible is ``False`` the ``draw()`` has no effect.
 
-        :rtype: bool
         """
         return self._visible
 
@@ -318,7 +317,6 @@ class SpriteList(Generic[SpriteType]):
         2. Multiply the color channels together: ``texture_color * sprite_color * spritelist_color``
         3. Multiply the floating point values by 255 and round the result
 
-        :rtype: Color
         """
         return Color.from_normalized(self._color)
 
@@ -361,7 +359,6 @@ class SpriteList(Generic[SpriteType]):
 
         This is a shortcut for setting the alpha value in the spritelist color.
 
-        :rtype: float
         """
         return self._color[3]
 
@@ -507,7 +504,6 @@ class SpriteList(Generic[SpriteType]):
         Get the next available slot in sprite buffers
 
         :return: index slot, buffer_slot
-        :rtype: int
         """
         # Reuse old slots from deleted sprites
         if self._sprite_buffer_free_slots:
@@ -525,7 +521,6 @@ class SpriteList(Generic[SpriteType]):
 
         :param sprite: Sprite to find and return the index of
 
-        :rtype: int
         """
         return self.sprite_list.index(sprite)
 

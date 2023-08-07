@@ -570,6 +570,5 @@ class Camera(SimpleCamera):
         :param sprite_list: SpriteList to check against
 
         :returns: List of sprites colliding, or an empty list.
-        :rtype: list
         """
         raise NotImplementedError()

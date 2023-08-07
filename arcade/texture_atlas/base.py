@@ -311,7 +311,6 @@ class TextureAtlas:
         """
         The width of the texture atlas in pixels
 
-        :rtype: int
         """
         return self._size[0]
 
@@ -320,7 +319,6 @@ class TextureAtlas:
         """
         The height of the texture atlas in pixels
 
-        :rtype: int
         """
         return self._size[1]
 
@@ -329,7 +327,6 @@ class TextureAtlas:
         """
         The width and height of the texture atlas in pixels
 
-        :rtype: Tuple[int,int]
         """
         return self._size
 
@@ -338,7 +335,6 @@ class TextureAtlas:
         """
         The maximum width of the atlas in pixels
 
-        :rtype: int
         """
         return self._max_size[0]
 
@@ -347,7 +343,6 @@ class TextureAtlas:
         """
         The maximum height of the atlas in pixels
 
-        :rtype: int
         """
         return self._max_size[1]
 
@@ -356,7 +351,6 @@ class TextureAtlas:
         """
         The maximum size of the atlas in pixels (x, y)
 
-        :rtype: Tuple[int,int]
         """
         return self._max_size
 
@@ -366,7 +360,6 @@ class TextureAtlas:
         Get or set the auto resize flag for the atlas.
         If enabled the atlas will resize itself when full.
 
-        :rtype: bool
         """
         return self._auto_resize
 
@@ -379,7 +372,6 @@ class TextureAtlas:
         """
         The texture border in pixels
 
-        :rtype: int
         """
         return self._border
 
@@ -388,7 +380,6 @@ class TextureAtlas:
         """
         The atlas texture.
 
-        :rtype: Texture
         """
         return self._texture
 
@@ -397,7 +388,6 @@ class TextureAtlas:
         """
         Texture coordinate texture for images.
 
-        :rtype: Texture
         """
         return self._image_uv_texture
 
@@ -406,7 +396,6 @@ class TextureAtlas:
         """
         Texture coordinate texture for textures.
 
-        :rtype: Texture
         """
         return self._texture_uv_texture
 
@@ -422,7 +411,6 @@ class TextureAtlas:
 
         A new list is constructed from the internal weak set of textures.
 
-        :rtype: Set[Texture]
         """
         return list(self._textures)
 
@@ -433,7 +421,6 @@ class TextureAtlas:
 
         A new list is constructed from the internal weak set of images.
 
-        :rtype: List[ImageData]
         """
         return list(self._images)
 
